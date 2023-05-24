@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	int a[50],b[50],c[50];
+	int i,j,m,n,k;
+	scanf("%d",&m);
+	for(i=0;i<m;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&n);
+	for(j=0;j<n;j++)
+	{
+		scanf("%d",&b[j]);
+	}
+	i=0;k=0;
+	for(j=0;j<(m+n);j++)
+	{
+		c[j]=a[i];
+		i++;
+		if(j>=m)
+		{
+			c[j]=b[k];
+			k++;
+		}
+	}
+	printf("\n The Merged array is:");
+	for(i=0;i<(m+n);i++)
+	{
+		printf("\n%d",c[i]);
+	}
+}
